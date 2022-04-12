@@ -12,11 +12,20 @@ These questions could be either multiple-choice, fill in the blanks, true or fal
 
 In other words, this system can be interpreted as a real-time student progress dashboard that will give the professor an idea of how his/her students are doing and if they need any specific support throughout the semester.
 
+## Downloads ##
+Please make sure to download the sense2vec model for distractors generation on your project folder,
+then in Pycharm uncompressed it with the following command:
+tar -xvf  s2v_reddit_2015_md.tar.gz
+
 ## Technologies and Tools ##
 1. HTML (Hypertext Markup Language)
 2. CSS (Cascading Style Sheets)
 3. JavaScript
-4. React Js
-5. Python
-6. Django
-7. PyCharm
+4. Python
+5. PyCharm
+6. Google Colab
+7. Docker
+8. Google Cloud Run
+
+
+[sense2vec](https://github.com/explosion/sense2vec/releases/download/v1.0.0/s2v_reddit_2015_md.tar.gz)
