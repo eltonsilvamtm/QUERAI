@@ -423,6 +423,3 @@ function closeScoreModal() {
 function closeOptionModal() {
   document.getElementById('option-modal').style.display = "none"
 }
-
-
-//Reference:https: //dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp 
