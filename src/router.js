@@ -14,6 +14,7 @@ let { response } = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 const cors = require('cors');
+const timeout = require('connect-timeout')
 
 //app.use(cors,)
 
@@ -22,11 +23,13 @@ app.use(fileUpload({
   createParentPath: true
 }));
 
+app.use(timeout('120s'))
+
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/', express.static(path.join(__dirname, '../webapp')))
+app.use('/', express.static(path.join(__dirname, './webapp')))
 
-app.post('/api/upload/', function(req, res) {
+app.post('/api/upload/', timeout('120s'), function(req, res) {
   try {
     if(!req.files) {
         res.send({
@@ -65,7 +68,7 @@ async function getQuiz(context){
     context : context
   })
 
-  fs.writeFileSync('../webapp/quiz.json', JSON.stringify(response.data));
+  fs.writeFileSync('./webapp/quiz.json', JSON.stringify(response.data));
 }
 
 app.listen(port);
