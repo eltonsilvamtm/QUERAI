@@ -1,3 +1,4 @@
 /api
 /venv
+/node_modules
 requirements.txt
