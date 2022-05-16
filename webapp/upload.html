@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUERAI</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+
+    <input type="checkbox" id="check">
+    <!--header começo-->
+    <header>
+        <label for="check">
+            <ion-icon name="menu-outline" id="sidebar_btn"></ion-icon>
+        </label>
+        <div class="left">
+            <h3>QUER<span>AI</span></h3>
+        </div>
+        <div class="right">
+        </div>
+    </header>
+    <!--header final-->
+    
+
+    <!--sidebar start-->
+    <div class="sidebar">
+        <center>
+            <img src="image/user.jpg" class="image" alt="">
+            <h2>User</h2>
+        </center>
+        <ul>
+            <li><a href="index.html"><ion-icon name="desktop-outline"></ion-icon><span>Home</span></a></li>
+            <li><a href="upload.html"><ion-icon name="cloud-upload-outline"></ion-icon><span>Upload File</span></a></li>
+            <li><a href="quiz.html"><ion-icon name="extension-puzzle-outline"></ion-icon><span>Play Quiz</span></a></li>
+            <li><a href="edit_quiz.html"><ion-icon name="log-out-outline"></ion-icon><span>Edit Quiz</span></a></li>
+        </ul>
+    </div>
+    <!--sidebar final-->
+   
+
+
+    <main class="content">
+
+    <!--upload start-->
+    <form id="form" action="/api/upload" method="POST" enctype="multipart/form-data">
+    <div class="upload-file-text">
+        <h2>Upload File</h2>
+		<p>Please upload a txt file with the text which you would like to generate questions!</p>
+    </div>
+
+    <div class="file-upload">
+       
+        <input class="file-upload__input" type="file" name="myFile" id="myFile" accept=".txt" required>
+      </div>
+
+      <!--upload final-->
+      <div class="file-submit">
+          <button class="file-submit__button" type="submit" id="quizGenerator" >Generate Quiz</button>
+        <span class="file-submit__label"></span>
+      </div>
+    </form>
+
+      <div class="preview-text">
+          <h3 id="printText"></h3>
+
+      </div>
+      <div id="loading"></div>
+      
+ </main>
+</body>
+    <div class="content">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="js/app.js"></script>
+    </div>
+</html>
